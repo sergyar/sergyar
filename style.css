@@ -1,0 +1,200 @@
+* {
+	padding: 0;
+	margin: 0;
+}
+
+body{
+	background-image: url(../Picture/Nature/landscape0.jpg);
+
+}
+
+.block{
+	min-width: 480px;
+	margin: 0 auto;
+
+}
+ul{
+	display: flex;
+	justify-content: center;
+	margin-top: 150px;
+	padding: 0;
+}
+
+img{
+	height: 300px;
+}
+
+ul li:nth-child(4){
+	float: left;
+	width: 365px;
+	overflow: hidden;
+	padding: 1px 1px 0;
+	cursor: pointer;
+	display: block;
+	transition: all 1.5s;
+}
+
+ul li{
+	float: left;
+	width: 80px;
+	overflow: hidden;
+	padding: 1px 1px 0;
+	cursor: pointer;
+	display: block;
+	transition: all 1.5s;
+}
+
+ul li:hover{
+	width: 365px;
+	transition: all 1s;
+}
+
+
+
+.test{
+	width: 150px;
+	height: 150px;
+	background:black;
+	cursor: pointer;
+	/*position: fixed;
+	left: 100px;
+	top: 50px;*/
+	z-index: 3;
+	position: relative;
+	margin: 0 auto;
+	
+
+}
+
+.inside{
+	width: 0%;
+	height: 0%;
+	background:#000 ;
+	transition: 0.5s;
+}
+
+.k{
+	position: relative;
+	left: 100%;
+	width: 0;
+	height: 0;
+	background: white;
+	border-radius: 50%;
+	transition: 0.5s;
+}
+
+.test:hover .inside{
+	width: 100%;
+	height: 100%;
+	background: rgba(0, 0, 0 ,0);
+}
+
+.test:hover .k{
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: orange;
+	
+}
+
+p{
+	color: white;
+	position: absolute;
+	opacity: 1;
+	transition: 0.5s;
+	font-size: 20px;
+}
+
+.test:hover p{
+	opacity: 0;
+}
+
+/*div.test:after {
+	content: '';
+	background: red;
+	width: 150px;
+	height: 150px;
+	
+}*/
+
+.text p{
+	color: black;
+	font-size: 20px;
+	
+}
+
+.wrapper{
+	position: absolute;
+	top:60%;
+	left:50%;
+	transform: translate(-50%);
+
+}
+
+.boximg {
+	width: 500px;
+	height: 300px;
+	border: 5px solid black;
+	overflow: hidden;
+	cursor: pointer;
+}
+
+.boximg img{
+	height: 300px;
+	transition: 0.5s;
+	overflow: hidden;
+}
+
+.contanier{
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top:0;
+	left:0;
+}
+
+.contanier:before, .contanier:after {
+	content: '';
+	width: 300px;
+	height: 300px;
+	position: absolute;
+	top:0;
+	left:0;
+	
+	opacity: 0;
+	transition: 0.5s;
+}
+
+.contanier:before{
+	transform: translateX(-125%)  rotate(45deg);
+}
+
+.contanier:after{
+	transform: translateX(195%) rotate(45deg);
+}
+
+.boximg:hover img{
+	transform: rotate(-30deg) scale(2);
+	filter: blur(2px);
+	
+}
+
+.boximg:hover .contanier:before{
+	opacity: 1;
+	transform: translateX(48%)  rotate(45deg);
+	background: rgba(200,0,255,0.2);
+	
+}
+
+.boximg:hover .contanier:after{
+	opacity: 1;
+	transform: translateX(22%)  rotate(45deg);
+	background: rgba(0,120,255,0.2);
+	
+}
+
+.text {
+	width: 100%;
+	height: 30%;
+	background:#fff;
+}
